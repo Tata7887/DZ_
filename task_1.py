@@ -30,7 +30,7 @@ class Matrix:
 
     def __eq__(self, other):
         if len(self._matr) != len(other._matr) or len(self._matr[0]) != len(other._matr[0]):
-            raise Exception('Error', '"матрицы разных размеров"')
+            raise Exception('Error', '"матрицы разных размеров "')
         else:
             for i in range(len(self._matr)):
                 for j in range(len(self._matr[0])):
