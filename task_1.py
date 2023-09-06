@@ -75,7 +75,7 @@ print ("Умножение матриц:")
 try:
     print(matr_1 * matr_3)
 except Exception as e:
-    print(f'Ошибка сложения матрицнег, {e}')
+    print(f'Ошибка сложения матриц, {e}')
 
 
 print ("Cравнение матриц:")
@@ -83,4 +83,4 @@ try:
     print(matr_1 == matr_1)
     print(matr_3 == matr_2)
 except Exception as e:
-    print(f'Ошибка сложения матрицнег, {e}')
+    print(f'Ошибка сложения матриц, {e}')
