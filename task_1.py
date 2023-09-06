@@ -17,20 +17,20 @@ class Matrix:
 
     def __add__(self, other):
         if len(self._matr) != len(other._matr) or len(self._matr[0]) != len(other._matr[0]):
-            raise Exception('Error', '"матрицы разных размедств"')
+            raise Exception('Error', '"матрицы разных размеров"')
         else:
             return Matrix([[self._matr[i][j] + other._matr[i][j] for j in range(len(self._matr[0]))] for i in range(len(self._matr))])
 
     def __mul__(self, other):
         if len(self._matr[0]) != len(other._matr):
-            raise Exception('Error', '"невозможно перемножить матдств"')
+            raise Exception('Error', '"невозможно перемножить матрицы"')
         else:
             mult_matr = [[sum(i * j for i, j in zip(i_row, j_col)) for j_col in zip(*other._matr)] for i_row in self._matr]
             return Matrix(mult_matr)
 
     def __eq__(self, other):
         if len(self._matr) != len(other._matr) or len(self._matr[0]) != len(other._matr[0]):
-            raise Exception('Error', '"матрицы разных размедств"')
+            raise Exception('Error', '"матрицы разных размеров"')
         else:
             for i in range(len(self._matr)):
                 for j in range(len(self._matr[0])):
